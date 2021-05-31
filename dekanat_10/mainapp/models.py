@@ -14,9 +14,9 @@ class Groups(models.Model):
 
 class Students(models.Model):
     number_group = models.ForeignKey(Groups, on_delete=models.CASCADE, verbose_name='Номер группы')
-    surname = models.TextField(verbose_name='Фамилия студента', blank=True, max_length=30)
-    name = models.TextField(verbose_name='Имя студента', blank=True, max_length=30)
-    patronymic = models.TextField(verbose_name='Отчество студента', blank=True, max_length=30)
+    surname = models.CharField(verbose_name='Фамилия студента', max_length=30)
+    name = models.CharField(verbose_name='Имя студента', max_length=30)
+    patronymic = models.CharField(verbose_name='Отчество студента', max_length=30)
 
     def __str__(self):
         return self.name
