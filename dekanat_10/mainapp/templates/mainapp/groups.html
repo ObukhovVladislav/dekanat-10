@@ -3,14 +3,14 @@
 <h1>Группы</h1>
 <div>
     <ul>
+        <li>
+            <a href="#">Создать группу</a>
+        </li>
         {% for item in group %}
         <li>
             <a href="{% url 'mainapp:students_page' item.pk %}">
                 {{ item }}
             </a>
-        </li>
-        <li>
-            <li><a href="#">Создать группу</a></li>
         </li>
         {% endfor %}
     </ul>
