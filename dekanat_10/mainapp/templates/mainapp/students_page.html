@@ -1,0 +1,15 @@
+{% extends 'mainapp/index.html' %}
+{% block content %}
+<h1>Студенты</h1>
+<div>
+    <ul>
+        {% for item in student %}
+        <li>
+            <a href="#">
+                {{ item }}
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}}

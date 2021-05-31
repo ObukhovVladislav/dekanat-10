@@ -1,0 +1,15 @@
+{% extends 'mainapp/index.html' %}
+{% block content %}
+<h1>Группы</h1>
+<div>
+    <ul>
+        {% for item in group %}
+        <li>
+            <a href="{% url 'mainapp:students_page' item.pk %}">
+                {{ item }}
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}
